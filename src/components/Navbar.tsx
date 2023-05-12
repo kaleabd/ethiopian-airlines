@@ -10,8 +10,8 @@ const Navbar = () => {
     text-primary w-11/12 mx-auto
     '>
         
-        <div className='flex items-center justify-between'>
-            <img src={Logo} alt="" className='lg:w-[25%] w-[50%]'/>
+        <div className='flex items-center lg:justify-start justify-between lg:w-auto w-full'>
+            <img src={Logo} alt="" className='lg:w-[25%] lg:mt-0 mt-3 w-[40%]'/>
             <ul className='lg:flex gap-6 mt-14 text-lg hidden '>
                 <li className='font-railway font-bold'>Home</li>
                 <li>Plan a trip</li>
@@ -19,7 +19,7 @@ const Navbar = () => {
                 <li>Service</li>
                 <li>Help</li>
             </ul>
-            <AiOutlineMenu className="text-4xl mt-14 lg:hidden "/>
+            <AiOutlineMenu className="text-4xl mt-10 lg:hidden flex"/>
         </div>
         <div className='lg:flex items-center mt-14 gap-6 hidden'>
             <FiSearch />
