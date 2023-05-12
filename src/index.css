@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inputs{
+    @apply border-r border-r-secondary/70 pr-1 flex flex-col gap-1 justify-center
+}
+.inputsfield {
+    @apply  outline-none text-primary font-bold font-railway text-lg
+}
+
