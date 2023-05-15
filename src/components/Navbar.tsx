@@ -1,37 +1,97 @@
 import Logo from '../assets/et-logo.png'
 import {FiSearch} from 'react-icons/fi'
 import {AiOutlineMenu} from 'react-icons/ai'
+import { motion} from 'framer-motion';
+
+const imgVariant = {
+    open: {
+        x: 0,
+        transition: { type: "spring", stiffness: 200 }
+    },
+    closed: {
+        x: -100,
+    },
+}
+const ulVariants = {
+    
+    open: {
+        scale: 1.05,
+        transition: {
+        staggerChildren: .3,
+        delayChildren: .2,
+        staggerDirection: 1, // forward 1, backwards -1
+        when: "afterChildren"
+    }},
+    closed: {
+        scale: 1
+    },
+}
+const liVariants = {
+    open: {y:0, opacity: 1},
+    closed: {y: -20, opacity: 0},
+}
+
 
 const Navbar = () => {
   return (
-    <nav 
+    <motion.div
+
     className='
     flex justify-between font-railway
     text-primary w-11/12 mx-auto
     '>
         
         <div className='flex items-center lg:justify-start justify-between lg:w-auto w-full'>
-            <img src={Logo} alt="" className='lg:w-[25%] lg:mt-0 mt-3 w-[40%]'/>
-            <ul className='lg:flex gap-6 mt-14 text-lg hidden '>
-                <li className='font-railway font-bold'>Home</li>
-                <li>Plan a trip</li>
-                <li>Flight info</li>
-                <li>Service</li>
-                <li>Help</li>
-            </ul>
-            <AiOutlineMenu className="text-4xl mt-10 lg:hidden flex"/>
+            <motion.img 
+            variants={imgVariant}
+            initial="closed"
+            animate="open"
+            src={Logo} alt="" className='lg:w-[25%] lg:mt-0 mt-3 w-[40%]'/>
+            <motion.ul 
+            variants={ulVariants}
+            initial="closed"    
+            animate={"open"}
+            exit="closed"
+            className='lg:flex gap-6 mt-14 text-lg hidden '>
+                <motion.li 
+                variants={liVariants}
+                className='font-railway font-bold'>Home</motion.li>
+                <motion.li variants={liVariants}>Plan a trip</motion.li>
+                <motion.li variants={liVariants}>Flight info</motion.li>
+                <motion.li variants={liVariants}>Service</motion.li>
+                <motion.li variants={liVariants}>Help</motion.li>
+            </motion.ul>
+            <motion.div 
+            variants={liVariants} 
+            initial="closed"    
+            animate="open"
+            exit="closed"
+            >
+                <AiOutlineMenu className="text-4xl mt-10 lg:hidden flex"/>
+            </motion.div>
+            
         </div>
-        <div className='lg:flex items-center mt-14 gap-6 hidden'>
-            <FiSearch />
-            <select name="" id="" className='outline-none bg-transparent'>
+        <motion.div 
+            variants={ulVariants} 
+            initial="closed"    
+            animate="open"
+            exit="closed"
+        className='lg:flex items-center mt-14 gap-6 hidden'>
+            <motion.div
+            variants={liVariants} 
+            >
+                <FiSearch />
+            </motion.div>
+            
+            <motion.select variants={liVariants}  name="" id="" className='outline-none bg-transparent'>
                 <option value="EN">EN</option>
                 <option value="AMH">AMH</option>
-            </select>
-            <button className='border-[2px] border-primary rounded-[10px] px-4 py-1'>
+            </motion.select>
+            <motion.button variants={liVariants}  className='border-[2px] border-primary rounded-[10px] px-4 py-1'>
                 Sign in 
-            </button>
-        </div>
-    </nav>
+            </motion.button>
+        </motion.div>
+    </motion.div>
   )
 }
 

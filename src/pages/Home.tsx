@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import SearchFlight from "../components/SearchFlight"
+import { motion} from 'framer-motion';
 
 const Home = () => {
   return (
