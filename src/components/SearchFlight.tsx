@@ -4,14 +4,14 @@ import useToggleStore from "../useToggleStore"
 const SearchFlight = () => {
     const {toggle} = useToggleStore()
   return (
-    <div className="flex flex-col gap-4 font-railway">
+    <div className="flex flex-col gap-4 font-railway ">
         <ul className="grid lg:grid-cols-4 sm:grid-cols-4 grid-cols-2 gap-2 lg:gap-24 text-lg text-primary">
             <li className="font-bold underline">Round Trip</li>
             <li>One-Way</li>
             <li>Multi-city</li>
             <li>Stopover</li>
         </ul>
-        <div className="lg:flex lg:flex-row gap-5 flex flex-col lg:justify-start justify-center ">
+        <div className="lg:flex lg:flex-row gap-5 flex flex-col lg:justify-start justify-center text-start">
             <div className="lg:flex bg-white rounded-[10px] px-4 py-2 gap-2 items-center">
                 <div className="lg:inputs inputs-res">
                     <p className="text-secondary">From</p>

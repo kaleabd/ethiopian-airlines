@@ -2,6 +2,8 @@ import Logo from '../assets/et-logo.png'
 import {FiSearch} from 'react-icons/fi'
 import {AiOutlineMenu} from 'react-icons/ai'
 import { motion} from 'framer-motion';
+import {useState} from 'react';
+import Sidebar from './Sidebar';
 
 const imgVariant = {
     open: {
@@ -33,6 +35,11 @@ const liVariants = {
 
 
 const Navbar = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false)
+
+    const toggleNav = () => {
+        setIsNavOpen(prev => !prev)
+    }
   return (
     <motion.div
 
@@ -41,7 +48,7 @@ const Navbar = () => {
     text-primary w-11/12 mx-auto
     '>
         
-        <div className='flex items-center lg:justify-start justify-between lg:w-auto w-full'>
+        <div className='flex items-center lg:justify-start justify-between lg:w-max w-full'>
             <motion.img 
             variants={imgVariant}
             initial="closed"
@@ -75,7 +82,7 @@ const Navbar = () => {
             animate="open"
             exit="closed"
             >
-                <AiOutlineMenu className="text-4xl mt-10 lg:hidden flex"/>
+                <AiOutlineMenu className="text-4xl mt-10 lg:hidden flex" onClick={toggleNav}/>
             </motion.div>
             
         </div>
@@ -103,6 +110,7 @@ const Navbar = () => {
                 Sign in 
             </motion.button>
         </motion.div>
+        <Sidebar isNavopened={isNavOpen} setNavOpened={toggleNav} />
     </motion.div>
   )
 }

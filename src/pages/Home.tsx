@@ -38,7 +38,7 @@ const searchVariant = {
 }
 const Home = () => {
   return (
-    <motion.div className="w-full relative flex flex-col font-railway z-[100]">
+    <motion.div className="w-full relative flex flex-col font-railway">
         <div className="absolute top-0 left-0 right-0 py-4 bg-white bg-opacity-10 backdrop-blur rounded-bl-2xl rounded-br-2xl">
             <Navbar />
         </div> 
@@ -56,16 +56,16 @@ const Home = () => {
             initial="closed"
             animate = "open"
             exit="closed"
-            className="lg:text-xl sm:text-lg lg:w-full sm:w-full">Your next adventure is just a search away</motion.p>
+            className="lg:text-xl sm:text-lg w-full">Your next adventure is just a search away</motion.p>
+            <motion.div
+            variants={searchVariant}
+            initial="closed"
+            animate = "open"
+            exit="closed"
+            className="bg-white bg-opacity-5 backdrop-blur rounded-xl py-6 px-10 mt-14 w-11/12 mx-auto">
+                <SearchFlight />
+            </motion.div>
         </div>
-        <motion.div
-        variants={searchVariant}
-        initial="closed"
-        animate = "open"
-        exit="closed"
-        className="bg-white bg-opacity-5 backdrop-blur rounded-xl py-6 px-10 mt-14 w-11/12 mx-auto">
-            <SearchFlight />
-        </motion.div>
         
     </motion.div>
   )
