@@ -8,7 +8,7 @@ const App = () => {
   return (
     <AnimatePresence>
       <div className="relative bg-cover w-full lg:h-screen bg-hero-image overflow-x-hidden">
-        <div className="absolute  inset-0 bg-black opacity-40"></div>
+        <div className="absolute  inset-0 bg-black opacity-40 -mb-10"></div>
         <Home />
       </div>
       <motion.div className="fixed top-[30%] lg:left-[30%] left-[25%] z-[200] lg:w-[45%] w-[50%]">

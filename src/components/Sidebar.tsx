@@ -48,12 +48,12 @@ const Sidebar = ({isNavopened, setNavOpened}: SideProp) => {
     animate={isNavopened ? "open" : "closed"}
     exit="closed"
     transition={{ damping: 300 }}
-    className="absolute top-0 right-0 p-6 bg-white rounded-lg shadow-lg font-railway w-[70%]">
+    className="absolute top-0 right-0 p-6 bg-white rounded-tl-lg rounded-bl-lg  shadow-lg font-railway w-[70%]">
         {
             isNavopened && (
                 <div className='flex flex-col gap-6 text-start text-lg'>
                     <div className='flex justify-between items-center w-full'>
-                        <img src={Logo} alt="et-logo" className='w-[80%]'/>
+                        <img src={Logo} alt="et-logo" className='w-[50%]'/>
                         <AiFillCloseCircle className="text-[1.7rem]"onClick={setNavOpened}/>
                     </div>
                     <motion.ul variants={ulVariants}

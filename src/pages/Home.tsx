@@ -62,7 +62,7 @@ const Home = () => {
             initial="closed"
             animate = "open"
             exit="closed"
-            className="bg-white bg-opacity-5 backdrop-blur rounded-xl py-6 px-10 mt-14 w-11/12 mx-auto">
+            className="bg-white bg-opacity-5 backdrop-blur rounded-xl py-6 px-10 mt-10 mb-10 w-11/12 mx-auto">
                 <SearchFlight />
             </motion.div>
         </div>

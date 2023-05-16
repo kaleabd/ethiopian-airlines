@@ -34,7 +34,7 @@ type ModalProps = {
                     <BsAirplaneEngines />
                 </motion.div>
                 <div className='text-center translate-y-[-5rem] relative'>
-                  <AiFillCloseCircle onClick={ontoggle} className = 'absolute top-[-8rem] right-[-7rem] text-primary text-4xl'/>
+                  <AiFillCloseCircle onClick={ontoggle} className = 'absolute top-[-8rem] lg:right-[-7rem] right-[-5rem] text-primary text-4xl'/>
                   {children}
                 </div>
                 

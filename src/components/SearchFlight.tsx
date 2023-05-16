@@ -23,11 +23,11 @@ const SearchFlight = () => {
                 </div>
                 <div className="lg:inputs inputs-res">
                     <p className="text-secondary">Depart</p>
-                    <input type="date" name="departure date" className="inputsfield"/>
+                    <input type="date" name="departure date" className="inputsfield w-full"/>
                 </div>
                 <div className="lg:inputs inputs-res">
                     <p className="text-secondary">Return</p>
-                    <input type="date" name="departure date" className="inputsfield" />
+                    <input type="date" name="departure date" className="inputsfield w-full" />
                 </div>
                 <div className="flex flex-col gap-1 justify-center pb-1 border-b border-b-secondary">
                     <p className="text-secondary">Passenger</p>
