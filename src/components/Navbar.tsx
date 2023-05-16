@@ -55,11 +55,19 @@ const Navbar = () => {
             className='lg:flex gap-6 mt-14 text-lg hidden '>
                 <motion.li 
                 variants={liVariants}
-                className='font-railway font-bold'>Home</motion.li>
-                <motion.li variants={liVariants}>Plan a trip</motion.li>
-                <motion.li variants={liVariants}>Flight info</motion.li>
-                <motion.li variants={liVariants}>Service</motion.li>
-                <motion.li variants={liVariants}>Help</motion.li>
+                className='font-railway font-bold cursor-pointer'>Home</motion.li>
+                <motion.li variants={liVariants}
+                className='cursor-pointer'
+                >Plan a trip</motion.li>
+                <motion.li variants={liVariants}
+                className='cursor-pointer'
+                >Flight info</motion.li>
+                <motion.li variants={liVariants}
+                className='cursor-pointer'
+                >Service</motion.li>
+                <motion.li variants={liVariants}
+                className='cursor-pointer'
+                >Help</motion.li>
             </motion.ul>
             <motion.div 
             variants={liVariants} 
@@ -87,7 +95,11 @@ const Navbar = () => {
                 <option value="EN">EN</option>
                 <option value="AMH">AMH</option>
             </motion.select>
-            <motion.button variants={liVariants}  className='border-[2px] border-primary rounded-[10px] px-4 py-1'>
+            <motion.button 
+            variants={liVariants}  
+            className='border-[2px] border-primary rounded-[10px] px-4 py-1
+            hover:bg-primary hover:text-white transition-all ease-in-out duration-300
+            '>
                 Sign in 
             </motion.button>
         </motion.div>

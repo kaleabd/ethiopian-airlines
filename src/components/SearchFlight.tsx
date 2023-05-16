@@ -1,4 +1,8 @@
+import useToggleStore from "../useToggleStore"
+
+
 const SearchFlight = () => {
+    const {toggle} = useToggleStore()
   return (
     <div className="flex flex-col gap-4 font-railway">
         <ul className="grid lg:grid-cols-4 sm:grid-cols-4 grid-cols-2 gap-2 lg:gap-24 text-lg text-primary">
@@ -43,7 +47,12 @@ const SearchFlight = () => {
                     </select>
                 </div>
             </div>
-            <button className="font-bold bg-primary text-white px-8 lg:py-2 py-4 rounded-[12px] text-lg">
+            <button 
+            onClick={() => toggle()}
+            className="
+            font-bold bg-primary text-white px-8 lg:py-2 py-4 rounded-[12px] text-lg
+            hover:bg-primary/90 transition-colors ease-in-out duration-300
+            ">
                 Show flight
             </button>
         </div>

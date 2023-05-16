@@ -1,13 +1,26 @@
 import Home from "./pages/Home"
-import {AnimatePresence} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
+import useToggleStore from "./useToggleStore";
+import Modal from "./components/Modal";
 
 const App = () => {
+  const {isToggled, toggle} = useToggleStore();
   return (
-    < AnimatePresence>
+    <AnimatePresence>
       <div className="relative bg-cover lg:h-screen bg-hero-image">
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-          <Home />
+        <div className="absolute  inset-0 bg-black opacity-40"></div>
+        <Home />
       </div>
+      <motion.div className="fixed top-[30%] lg:left-[30%] left-[25%] z-[900] lg:w-[45%] w-[50%]">
+          <Modal toggle={isToggled} ontoggle={toggle}>
+              <h2 className="text-lg font-semibold font-railway">Unfortunately, we currently do not offer flights to your selected destination.</h2>
+          </Modal>
+      </motion.div>
+      {
+        isToggled && (
+          <motion.div className="fixed inset-0 z-[800] bg-opacity-75 backdrop-filter backdrop-blur-sm"></motion.div>
+        )
+      }
     </ AnimatePresence>
   )
 }
