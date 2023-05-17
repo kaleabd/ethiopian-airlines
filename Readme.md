@@ -4,7 +4,7 @@ This project is a redesigned version of the Ethiopian Airlines homepage, impleme
 
 ## Demo
 
-Check out the [live demo](https://ethiopian-airlines.netlify.app/) of the redesigned Ethiopian Airlines homepage with the search flight function.
+Check out the [live demo](https://ethiopian-airlines.netlify.app/) 
 
 ## Getting Started
 
