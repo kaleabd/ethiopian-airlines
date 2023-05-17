@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-4. Open your preferred web browser and visit `http://localhost:3000` to see the redesigned Ethiopian Airlines homepage with the search flight function in action.
+4. Open your preferred web browser and visit `http://localhost:5173` to see the redesigned Ethiopian Airlines homepage with the search flight function in action.
 
 ## Technologies Used
 
