@@ -56,4 +56,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Thank you for checking out the redesigned Ethiopian Airlines homepage with search flight function project! We hope you find it useful and inspiring for your own projects. If you have any questions or need further assistance, please don't hesitate to reach out.
+Thank you for checking out the redesigned Ethiopian Airlines homepage with project! I hope you find it useful and inspiring for your own projects. If you have any questions or need further assistance, please don't hesitate to reach out.
