@@ -1,6 +1,6 @@
 # Ethiopian Airlines Homepage Redesign
 
-This project is a redesigned version of the Ethiopian Airlines homepage, implemented using Framer Motion, React, TypeScript, and Tailwind CSS. It includes a search flight function to make it easier for users to find and book their flights.
+This project is a redesigned version of the Ethiopian Airlines homepage, implemented using Framer Motion, React, TypeScript, and Tailwind CSS. It includes a search flight function to make it easier for users to find and book their flights with best user experience.
 
 ## Getting Started
 
