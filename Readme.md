@@ -39,12 +39,11 @@ npm run dev
 ## Project Structure
 
 - `/src` - Contains the source code for the project.
+- `/assets` - Contains images and assets used in the application.
 - `/components` - Includes reusable React components used in the application.
 - `/pages` - Contains the main page components.
-- `/styles` - Holds the styling files, including Tailwind CSS classes.
-- `/utils` - Contains utility functions used throughout the project.
-- `/images` - Contains images and assets used in the application.
 - `package.json` - Lists the project dependencies and scripts.
+- `tailwind.config.js` - Tailwind configuration file.
 - `tsconfig.json` - TypeScript configuration file.
 
 ## Contribution
