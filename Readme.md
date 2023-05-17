@@ -2,6 +2,10 @@
 
 This project is a redesigned version of the Ethiopian Airlines homepage, implemented using Framer Motion, React, TypeScript, and Tailwind CSS. It includes a search flight function to make it easier for users to find and book their flights with best user experience.
 
+## Demo
+
+Check out the [live demo](https://ethiopian-airlines.netlify.app/) of the redesigned Ethiopian Airlines homepage with the search flight function.
+
 ## Getting Started
 
 To run the code, follow these steps:
